@@ -80,7 +80,7 @@ Ce script :
 
 - Génère une carte interactive carte_victimes_trajet.html
 
-## 🧪 Résultat
+## Résultat
 Ouvre carte_victimes_trajet.html dans ton navigateur pour visualiser :
 
 - Le trajet du drone (ligne noire)
