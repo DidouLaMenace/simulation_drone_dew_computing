@@ -1,0 +1,17 @@
+Résumé de mission du drone autonome
+
+Total de victimes détectées : 9
+Critiques : 1
+Modérées : 5
+Faibles : 3
+
+Liste des victimes (coordonnées GPS) :
+ - [CRITIQUE] Lat: 48.418292 | Lon: -71.052743
+ - [MODÉRÉ] Lat: 48.417799 | Lon: -71.053232
+ - [MODÉRÉ] Lat: 48.418297 | Lon: -71.052634
+ - [MODÉRÉ] Lat: 48.418474 | Lon: -71.052948
+ - [MODÉRÉ] Lat: 48.41882 | Lon: -71.052369
+ - [MODÉRÉ] Lat: 48.420208 | Lon: -71.05164
+ - [FAIBLE] Lat: 48.418773 | Lon: -71.052474
+ - [FAIBLE] Lat: 48.419516 | Lon: -71.051433
+ - [FAIBLE] Lat: 48.420421 | Lon: -71.051359
