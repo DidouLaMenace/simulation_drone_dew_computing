@@ -9,6 +9,12 @@ Le drone suit une trajectoire définie manuellement sur une carte interactive, t
 
 Assurez-vous d'utiliser **Python 3.7+**.
 
+Mettez un place un environnement python : 
+```bash
+python3 -m venv env/
+source env/bin/activate
+```
+
 Installez les bibliothèques nécessaires :
 
 ```bash
@@ -40,7 +46,7 @@ drone_simulation/
 Dans un terminal (à la racine du projet) :
 
 ```bash
-python server.py
+python3 server.py
 ```
 
 Ce serveur attend les coordonnées envoyées par la carte.
