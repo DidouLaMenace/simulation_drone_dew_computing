@@ -19,12 +19,19 @@ pip install flask flask-cors folium
 
 drone_simulation/
 │
+
 ├── server.py                    # Serveur Flask pour recevoir les coordonnées
+
 ├── selection_points.html        # Carte interactive pour choisir le trajet
+
 ├── main_simulation.py           # Génère les victimes et le tracé du drone
+
 ├── coordonnees_points.json      # Coordonnées envoyées depuis la carte (généré dynamiquement)
+
 ├── stockage_local.json          # Victimes détectées et stockées localement (résultat)
+
 ├── carte_victimes_trajet.html   # Carte finale avec trajet + victimes détectées
+
 └── README.md
 
 ## Lancement de l'application
@@ -38,12 +45,14 @@ python server.py
 
 Ce serveur attend les coordonnées envoyées par la carte.
 
+
 2. Lancer un serveur local pour la carte
 Dans un autre terminal, lance le serveur HTTP :
 
 ```bash
 python3 -m http.server 8000
 ```
+
 
 3. Ouvrir la carte interactive
 Dans ton navigateur, va à :
@@ -58,6 +67,7 @@ Puis une deuxième fois pour le point d’arrivée (🟣)
 
 Un message "Coordonnées enregistrées !" apparaîtra si tout fonctionne
 
+
 4. Lancer la simulation
 Une fois les points choisis, exécute le script principal :
 
@@ -70,21 +80,15 @@ Vous pouvez observer la détection de victimes en vous rendant à l'URL :
 http://localhost:8000/carte_victimes_trajet.html
 ```
 
+
 Ce script :
-
 - Génère des points simulés le long du trajet
-
 - Détecte aléatoirement des victimes
-
 - Stocke les victimes détectées dans stockage_local.json
-
 - Génère une carte interactive carte_victimes_trajet.html
 
-## 🧪 Résultat
+## Résultat
 Ouvre carte_victimes_trajet.html dans ton navigateur pour visualiser :
-
 - Le trajet du drone (ligne noire)
-
 - Les victimes détectées (priorité critique, modérée, faible)
-
 - Départ (bleu) / Arrivée (violet)
