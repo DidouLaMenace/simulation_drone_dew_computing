@@ -52,14 +52,18 @@ python3 server.py
 
 Ce serveur attend les coordonnées envoyées par la carte.
 
+
 #### 2. Lancer un serveur local pour la carte
+
 Dans un autre terminal, lance le serveur HTTP :
 
 ```bash
 python3 -m http.server 8000
 ```
 
+
 #### 3. Ouvrir la carte interactive
+
 Dans ton navigateur, va à :
 
 ```bash
@@ -73,6 +77,7 @@ Puis une deuxième fois pour le point d’arrivée (🟣)
 Un message "Coordonnées enregistrées !" apparaîtra si tout fonctionne
 
 #### 4. Lancer la simulation
+
 Une fois les points choisis, exécute le script principal :
 
 ```bash
@@ -84,23 +89,18 @@ Vous pouvez observer la détection de victimes en vous rendant à l'URL :
 http://localhost:8000/carte_victimes_trajet.html
 ```
 
+
 Ce script :
-
 - Génère des points simulés le long du trajet
-
 - Détecte aléatoirement des victimes
-
 - Stocke les victimes détectées dans *stockage_local.json*
-
 - Génère une carte interactive *carte_victimes_trajet.html*
 
 ## Résultat
 Ouvre *carte_victimes_trajet.html* dans ton navigateur pour visualiser :
 
 - Le trajet du drone (ligne noire)
-
 - Les victimes détectées (priorité critique, modérée, faible)
-
 - Départ (bleu) / Arrivée (violet)
 
 
@@ -109,3 +109,4 @@ Un rapport texte est généré automatiquement dans le dossier rapport/, avec un
 Le fichier contient :
 - Un récapitulatif global (nombre de victimes par niveau)
 - La position GPS de chaque victime triée par criticité
+
