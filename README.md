@@ -17,35 +17,36 @@ pip install flask flask-cors folium
 
 ## Arborescence du projet
 
-drone_simulation/
-│
-├── server.py                    # Serveur Flask pour recevoir les coordonnées
-├── selection_points.html        # Carte interactive pour choisir le trajet
-├── main_simulation.py           # Génère les victimes et le tracé du drone
-├── coordonnees_points.json      # Coordonnées envoyées depuis la carte (généré dynamiquement)
-├── stockage_local.json          # Victimes détectées et stockées localement (résultat)
-├── carte_victimes_trajet.html   # Carte finale avec trajet + victimes détectées
-└── README.md
+.
+├── carte_victimes_trajet.html #*Carte finale avec trajet + victimes détectées*
+├── coordonnees_points.json  #*Coordonnées envoyées depuis la carte*
+├── main_simulation.py #*Génère les victimes*
+├── rapport #*Dossier contenant les rapports de mission (.txt)*
+│   └── resume_mission_drone_2025-04-19_19-34-19.txt
+├── selection_points.html #*Carte interactive pour choisir le trajet*
+├── server.py  #*Serveur Flask pour recevoir les coordonnées*                                       
+└── stockage_local.json #*Victimes détectées et stockées localement*
+
 
 ## Lancement de l'application
 
-1. Démarrer le serveur Flask
+#### 1. Démarrer le serveur Flask
 Dans un terminal (à la racine du projet) :
 
 ```bash
-python server.py
+python3 server.py
 ```
 
 Ce serveur attend les coordonnées envoyées par la carte.
 
-2. Lancer un serveur local pour la carte
+#### 2. Lancer un serveur local pour la carte
 Dans un autre terminal, lance le serveur HTTP :
 
 ```bash
 python3 -m http.server 8000
 ```
 
-3. Ouvrir la carte interactive
+#### 3. Ouvrir la carte interactive
 Dans ton navigateur, va à :
 
 ```bash
@@ -58,11 +59,11 @@ Puis une deuxième fois pour le point d’arrivée (🟣)
 
 Un message "Coordonnées enregistrées !" apparaîtra si tout fonctionne
 
-4. Lancer la simulation
+#### 4. Lancer la simulation
 Une fois les points choisis, exécute le script principal :
 
 ```bash
-python main_simulation.py
+python3 main_simulation.py
 ```
 
 Vous pouvez observer la détection de victimes en vous rendant à l'URL : 
@@ -76,15 +77,22 @@ Ce script :
 
 - Détecte aléatoirement des victimes
 
-- Stocke les victimes détectées dans stockage_local.json
+- Stocke les victimes détectées dans *stockage_local.json*
 
-- Génère une carte interactive carte_victimes_trajet.html
+- Génère une carte interactive *carte_victimes_trajet.html*
 
 ## Résultat
-Ouvre carte_victimes_trajet.html dans ton navigateur pour visualiser :
+Ouvre *carte_victimes_trajet.html* dans ton navigateur pour visualiser :
 
 - Le trajet du drone (ligne noire)
 
 - Les victimes détectées (priorité critique, modérée, faible)
 
 - Départ (bleu) / Arrivée (violet)
+
+
+Un rapport texte est généré automatiquement dans le dossier rapport/, avec un nom horodaté : ````rapport/resume_mission_drone_2025-04-19_23-09-45.txt````
+
+Le fichier contient :
+- Un récapitulatif global (nombre de victimes par niveau)
+- La position GPS de chaque victime triée par criticité
