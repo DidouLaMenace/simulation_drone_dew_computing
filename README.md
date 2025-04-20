@@ -9,6 +9,12 @@ Le drone suit une trajectoire définie manuellement sur une carte interactive, t
 
 Assurez-vous d'utiliser **Python 3.7+**.
 
+Mettez un place un environnement python : 
+```bash
+python3 -m venv env/
+source env/bin/activate
+```
+
 Installez les bibliothèques nécessaires :
 
 ```bash
@@ -18,13 +24,20 @@ pip install flask flask-cors folium
 ## Arborescence du projet
 
 .
+
 ├── carte_victimes_trajet.html #*Carte finale avec trajet + victimes détectées*
+
 ├── coordonnees_points.json  #*Coordonnées envoyées depuis la carte*
+
 ├── main_simulation.py #*Génère les victimes*
+
 ├── rapport #*Dossier contenant les rapports de mission (.txt)*
+
 │   └── resume_mission_drone_2025-04-19_19-34-19.txt
 ├── selection_points.html #*Carte interactive pour choisir le trajet*
+
 ├── server.py  #*Serveur Flask pour recevoir les coordonnées*                                       
+
 └── stockage_local.json #*Victimes détectées et stockées localement*
 
 
