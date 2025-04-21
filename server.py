@@ -3,7 +3,7 @@ from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-CORS(app)  # 👈 Active le CORS pour toutes les routes
+CORS(app)
 
 @app.route("/coords", methods=["POST"])
 def receive_coords():
